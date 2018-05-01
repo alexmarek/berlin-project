@@ -1,6 +1,6 @@
-# infarm
+# berlin-project
 
-> 2018 website for Infarm
+> 2018 website for Berlin
 
 ## Build Setup
 
