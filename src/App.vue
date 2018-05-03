@@ -34,6 +34,9 @@ export default {
 </script>
 
 <style lang="scss">
+
+$white : #f6f6f6;
+
 @font-face {
   font-family: 'FedraSansStd';
   src: url('./assets/fonts/FedraSansStd-Light.otf') format('opentype');
@@ -47,14 +50,32 @@ export default {
   font-weight: 800;
   font-style: normal;
 }
+
 #app {
   font-family: 'FedraSansStd', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  .container {
+    max-width: 100%;
+
+    &--boxed {
+      max-width: 1440px;
+    }
+  }
+  button.btn-outline-success {
+    color: $white;
+    border: solid 2px $white;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.8em;
+    background-color: transparent;
+    &:not(:disabled):not(.disabled):active, &:not(:disabled):not(.disabled):focus{
+      box-shadow: none;
+    }
+  }
 }
+
+
 
 h1, h2 {
   font-weight: normal;
@@ -69,9 +90,7 @@ ul {
   }
 }
 
-
-
 a {
-  color: #42b983;
+  color: #000;
 }
 </style>
