@@ -3,12 +3,7 @@
       <div class="row">
           <div class="container container--boxed">
             <ul class="row">
-                <li><router-link to='/' exact>Home</router-link></li>
-                <li><router-link to='/products' exact>Products</router-link></li>
-                <li><router-link to='/locations' exact>Locations</router-link></li>
-                <li><router-link to='/concept' exact>Concept</router-link></li>
-                <li><router-link to='/mission' exact>Mission</router-link></li>
-                <li><router-link to='/contact' exact>Contact</router-link></li>
+                <li v-for="item in menu" :key="item.id" ><router-link :to='item.url' exact>{{ item.title }}</router-link></li>
             </ul>
           </div>
       </div>
@@ -16,8 +11,19 @@
 </template>
 
 <script>
-    export default {
-
+    import { mapState, mapActions } from  'vuex'
+        export default {
+        created() {
+            this.getMenu() 
+        },
+        computed: mapState({
+            menu: state => state.menu.menu,
+        }),
+        methods: {
+            ...mapActions([
+            "getMenu"
+            ])
+        }
     }
 </script>
 

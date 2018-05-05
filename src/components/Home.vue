@@ -4,7 +4,6 @@
             <div class="container container--boxed">
                 <div class="row">
                     <div class="col-sm ">
-                        <h1>GROWING FOOD EVERYWHERE</h1>
                         <b-button variant="outline-success">Find Out More</b-button>
                         <h2 v-for="item in title" :key="item.id" v-html="item"></h2>
                         <p v-for="item in content" :key="item.id" v-html="item"></p>
@@ -23,12 +22,12 @@ export default {
     this.getPosts()
   },
   computed: mapState({
-    content: state => state.posts.posts[0].content,
-    title: state => state.posts.posts[0].title,
+    content: state => state.posts.pages[0].content,
+    title: state => state.posts.pages[0].title,
   }),
   methods: {
     ...mapActions([
-      "getPosts",
+      "getPosts"
     ])
   }
 }

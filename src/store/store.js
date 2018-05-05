@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import posts from "./posts"
+import menu from "./menu"
 
 Vue.use(Vuex)
 
@@ -16,7 +17,8 @@ export const state = {
     state,
     mutations,
     modules: {
-      posts
+      posts,
+      menu
     }
   })
   
