@@ -1,0 +1,21 @@
+button {
+    color: white;
+    border: solid 2px white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    height: 3.6em;
+    border-radius: 0;
+    line-height: 3.6em;
+    letter-spacing: 1;
+    background-color: transparent;
+    padding: 0 1em;
+    &:active, &:focus, &:hover{
+        box-shadow: none;
+        outline: none;
+    }
+    &.inverted {
+        background-color: $buttonGrey;
+        border-color: $buttonGrey;
+    }
+}

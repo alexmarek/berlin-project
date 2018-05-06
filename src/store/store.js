@@ -6,7 +6,8 @@ import menu from "./menu"
 Vue.use(Vuex)
 
 export const state = {
-    count: 0
+    count: 0,
+    scrolled: false
   }
   
   export const mutations = {
