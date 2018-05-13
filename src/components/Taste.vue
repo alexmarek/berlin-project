@@ -21,12 +21,12 @@
             <div class="row">
                         
                 <div class="col-sm-12 container--boxed">
-                  <div class="row" v-for="(item, index) in tastePage[0].acf" :key="index">
+                  <div class="row" v-for="(item, index) in tastePage[0].acf.taste_selection" :key="index">
                     <div class="col-md-5 d-flex align-items-center">
-                        <h3>{{ item }}</h3>
+                        <h3>{{ item.post_title }}</h3>
                     </div>
                     <div class="col-md-7 d-flex align-items-center">
-                        <span v-html="item"></span>
+                        <span v-html="item.guid"></span>
                     </div>
                   </div>
                 </div>
