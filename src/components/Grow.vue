@@ -1,5 +1,5 @@
 <template>
   <div>
-      <h1>Mission</h1>
+      <h1>Grow</h1>
   </div>
 </template>

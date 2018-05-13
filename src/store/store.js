@@ -2,12 +2,14 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import posts from "./posts"
 import menu from "./menu"
+import taste from "./taste"
 
 Vue.use(Vuex)
 
 export const state = {
     count: 0,
-    scrolled: false
+    scrolled: false,
+    blackMenuText: false
   }
   
   export const mutations = {
@@ -19,7 +21,8 @@ export const state = {
     mutations,
     modules: {
       posts,
-      menu
+      menu,
+      taste
     }
   })
   

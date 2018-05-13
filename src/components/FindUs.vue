@@ -1,5 +1,5 @@
 <template>
   <div>
-      <h1>Locations</h1>
+      <h1>Find Us</h1>
   </div>
 </template>

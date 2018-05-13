@@ -7,10 +7,10 @@
 
 <script>
 import home from './components/Home.vue'
-import products from './components/Products.vue'
-import locations from './components/Locations.vue'
-import concept from './components/Concept.vue'
-import mission from './components/Mission.vue'
+import grow from './components/Grow.vue'
+import taste from './components/Taste.vue'
+import impact from './components/Impact.vue'
+import findUs from './components/FindUs.vue'
 import contact from './components/Contact.vue'
 import menu from './components/Menu.vue'
 
@@ -18,10 +18,10 @@ export default {
   name: 'app',
   components: {
     home,
-    products,
-    locations,
-    concept,
-    mission,
+    grow,
+    taste,
+    impact,
+    findUs,
     contact,
     appMenu : menu,
   },
@@ -31,7 +31,7 @@ export default {
     }
   },
   methods: {
-  }
+  },
 }
 </script>
 

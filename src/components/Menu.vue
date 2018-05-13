@@ -1,9 +1,9 @@
 <template>
-  <nav class="container" :class="{ 'scrolled' : $store.state.scolled }">
+  <nav class="container" :class="{ 'scrolled' : $store.state.scolled, 'black-menu' : $store.state.blackMenuText }">
       <div class="row">
           <div class="container container--boxed" >
             <ul class="row">
-                <li v-for="item in menu" :key="item.id" ><router-link :to='item.url' exact>{{ item.title }}</router-link></li>
+                <li v-for="item in menu" :key="item.id" ><router-link @click.native="menuColor(item)" :to='item.url' exact>{{ item.title }}</router-link></li>
                 <li class="language-switch"><a href="#">DE</a></li>
             </ul>
           </div>
@@ -24,6 +24,14 @@
             ...mapActions([
             "getMenu"
             ]),
+            menuColor: function (item) {
+                if (item.classes[0] == 'black-menu-text'){
+                    this.$store.state.blackMenuText = true;
+                } else  {
+                    this.$store.state.blackMenuText = false;
+                }
+                console.log(this.$store.state.blackMenuText)
+            }
         }
     }
 </script>

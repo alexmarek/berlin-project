@@ -1,23 +1,40 @@
 <template>
-    <div class="container header header--home">
-        <div class="row">
-            <div class="container container--boxed">
-                <div class="row">
-                    
-                    <slider ref="flickity" :options="sliderOptions">
-                        <div class="slider" v-for="(item, index) in pages[0].acf.header_section" :key="index">
-                            <div class="slider__image" :style='{ backgroundImage: "url(" + item.slide_image + ")", }'>
-                                <h2 class="slider__title">{{ item.slide_title }}</h2>
-                                <button class="slider__button"><a :href="item.slide_button_link">{{ item.slide_button_text }}</a></button>
+    <div>
+        <div class="container header header--home">
+            <div class="row">
+                        
+                <slider ref="flickity" :options="sliderOptions">
+                    <div class="slider" v-for="(item, index) in pages[1].acf.header_section" :key="index">
+                        <div class="slider__image" :style='{ backgroundImage: "url(" + item.slide_image + ")", }'>
+                            <div class="container container--boxed">
+                                <div class="row">
+                                    <h2 class="slider__title">{{ item.slide_title }}</h2>
+                                    <router-link class="button slider__button" :to="item.slide_button_link">{{ item.slide_button_text }}</router-link>
+                                </div>
                             </div>
-                            
-                        </div>
-                    </slider>
+                        </div> 
+                    </div>
+                </slider>
+                    
+                <p class="text-center" v-if="pending">loading posts...</p>
+                <p v-if="error">data loading failed</p>
+
+            </div>
+            <div v-waypoint="{ active : true, callback : onWaypoint }"></div>
+        </div>
+        <div class="container container--boxed content-item">
+            
+            <div class="row" v-for="(item, index) in pages[1].acf.content" :key="index">
+                <div class="col-md-6 d-flex align-items-center">
+                    <h3>{{ item.heading }}</h3>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <p v-html="item.content"></p>
                 </div>
             </div>
+
         </div>
-        <div v-waypoint="{ active : true, callback : onWaypoint }"></div>
-    </div>
+    </div>    
 </template>
 
 <script>
@@ -39,10 +56,12 @@ export default {
         }
     },
     created() {
-        this.getPosts()
+        this.getPosts() 
     },
     computed: mapState({
         pages: state => state.posts.pages,
+        pending: state => state.pending,
+        error: state => state.error
     }),
     components: {
        slider: Slider,

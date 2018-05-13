@@ -19,6 +19,7 @@ Vue.use(VueWaypoint)
 Vue.use(vuescroll)
 Vue.use(Slider)
 
+
 const router = new VueRouter({
     routes: Routes,
     mode: 'history'
