@@ -50,6 +50,15 @@ a.button {
 }
 
 #app {
+    .black-box{
+        background-color: $primary;
+        .content-item{
+            h1, h2, h3, h4, p {
+                color: white;
+            }
+        }
+    }
+    
     nav {
         z-index: 1;
         position: relative;
@@ -58,6 +67,18 @@ a.button {
             justify-content: flex-end;
             padding-bottom: 0;
             margin-bottom: 0;
+            .main-logo{
+                flex: auto;
+                width: 109px;
+                height: 28px;
+                a {
+                    border: none;
+                    margin-left: 0;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
             li:nth-child(6) {
                 margin-right: 100px;
             }
@@ -65,7 +86,7 @@ a.button {
                 text-transform: uppercase;
                 font-weight: bold;
                 font-size: 0.9em;
-                margin: 0 1em;
+                margin: 0 2em;
                 color: white;
                 line-height: 5em;
                 transition: all linear 0.2s;
@@ -76,9 +97,6 @@ a.button {
                     border-color: white;
                     text-decoration: none;
                 }
-            }
-            .language-switch {
-                margin-right: 5%;
             }
             &.inverted {
                 background-color: $primary;
@@ -100,6 +118,19 @@ a.button {
             }
         }
     }
+    .language-switch {
+        position: absolute;
+        right: 5%;
+        top: 25px;
+        a{
+            color: $primaryWhite;
+            font-weight: bold;
+            font-size: 0.9em;
+            img {
+                margin-top: -4px;
+            }
+        }
+    }
     .container {
         max-width: 100%;
         &--boxed {
@@ -109,6 +140,7 @@ a.button {
             margin: auto;
         }
     }
+    
     .header {
         &--home {
             height: 667px;
@@ -116,7 +148,7 @@ a.button {
             z-index: 0;
             overflow: hidden;
             @include respond-to($desktop) {
-                height: 810px;
+                height: 800px;
                 margin-top: -140px;
             }
         }
@@ -199,12 +231,27 @@ a.button {
                 position: absolute;
                 bottom: 185px;
                 left: 0;
-                padding-right: 100px;
                 color: $primary;
                 background-color: $primaryWhite;
+                width: 260px;
+                img {
+                    float: right;
+                    margin-top: -1px;
+                    transform: translateX(0);
+                    transition: 0.2s transform ease-in-out;
+                }
+                &:hover {
+                    background-color: transparent;
+                    border-color: transparent;
+                    border-bottom: 2px solid $primaryWhite;
+                    color: $primaryWhite;
+                    img{
+                        transform: translateX(5px);
+                    }
+                }
+                
                 @include respond-to($desktop) {
                     bottom: 150px;
-                    width: auto;
                 }
                 @include respond-to($phone) {
                     width: 100%;

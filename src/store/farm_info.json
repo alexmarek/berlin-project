@@ -1,0 +1,255 @@
+{"Farms":[
+      {
+         "Farm_name":"Chausseestrasse",
+         "Coordinates":{
+            "lat":52.53467694449381,
+            "lng":13.378117647987239
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Chaussee Strasse 43",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"10155",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Schnellerstrasse",
+         "Coordinates":{
+            "lat":52.458595,
+            "lng":13.509653
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Schnellerstra&#223;e 131",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"12439",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Stephanstrasse",
+         "Coordinates":{
+            "lat":52.531899757802194,
+            "lng":13.34479848589038
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Stephanstrasse 37-43",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"10559",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Potsdamerstrasse",
+         "Coordinates":{
+            "lat":52.30268888579732,
+            "lng":13.257186588876863
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Potsdamer Str. 60",
+         "line_2":null,
+         "line_3":null,
+         "city":" Ludwigsfelde",
+         "postcode":"14974",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Johannisthaler Chaussee",
+         "Coordinates":{
+            "lat":52.426673067393665,
+            "lng":13.448653425670216
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Johannisthaler Chaussee 365",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"12351",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Goltzstrasse",
+         "Coordinates":{
+            "lat":52.38729097576183,
+            "lng":13.408543802265882
+         },
+         "Organization":"Edeka",
+         "Category":"STORE"
+      },
+      {
+         "Farm_name":"Greifswalderstrasse",
+         "Coordinates":{
+            "lat":52.5413079925836,
+            "lng":13.439871661762481
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Greifswalder Str. 86",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"10409",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"An der Ostbahn [Metro]",
+         "Coordinates":{
+            "lat":52.509418183310174,
+            "lng":13.44347202469541
+         },
+         "Organization":"Metro",
+         "Category":"STORE",
+         "line_1":"An der Ostbahn 5",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"10243",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Heidelbergerstrasse",
+         "Coordinates":{
+            "lat":52.48890433403949,
+            "lng":13.447812235671478
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Heidelberger Str. 90",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":" 12435",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Jessnerstrasse",
+         "Coordinates":{
+            "lat":52.509988416807346,
+            "lng":13.470913484057178
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Jessnerstr. 47-55",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"10247",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Raoul-Wallenberg strasse",
+         "Coordinates":{
+            "lat":52.54900055589505,
+            "lng":13.55260383076714
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Raoul-Wallenberg-Strasse 18",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"12679",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Potsdamer Chaussee",
+         "Coordinates":{
+            "lat":52.426893998484445,
+            "lng":13.21607005596951
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Potsdamer Chaussee 80",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"14129 ",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Nollendorfplatz",
+         "Coordinates":{
+            "lat":52.499050707284084,
+            "lng":13.354618216085527
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Nollendorfplatz 8-9",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"10777",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Grenzallee",
+         "Coordinates":{
+            "lat":52.470287832885106,
+            "lng":13.461587294745215
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Grenzallee 4-6",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"12057",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Boelschestrasse",
+         "Coordinates":{
+            "lat":52.45142481897096,
+            "lng":13.625126529762099
+         },
+         "Organization":"Edeka",
+         "Category":"STORE"
+      },
+      {
+         "Farm_name":"Blankenburgerstrasse",
+         "Coordinates":{
+            "lat":52.58469234143581,
+            "lng":13.416892605775871
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Blankenburger Str. 79-81",
+         "line_2":null,
+         "line_3":null,
+         "city":"Berlin",
+         "postcode":"13156",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Clayallee",
+         "Coordinates":{
+            "lat":52.452215669524946,
+            "lng":13.270647826188451
+         },
+         "Organization":"Edeka",
+         "Category":"STORE",
+         "line_1":"Clayallee 171-177",
+         "line_2":"14195",
+         "line_3":"Deutschland",
+         "city":"Berlin",
+         "postcode":"10999",
+         "country":"Germany"
+      },
+      {
+         "Farm_name":"Nonnendammallee [Metro]",
+         "Coordinates":{
+            "lat":52.540949087586284,
+            "lng":13.244350185563803
+         },
+         "Organization":"Metro",
+         "Category":"STORE"
+      }
+   ]
+}
