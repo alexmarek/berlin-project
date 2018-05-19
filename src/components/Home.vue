@@ -11,7 +11,6 @@
                                     <h2 class="slider__title">{{ item.slide_title }}</h2>
                                     <router-link class="button slider__button" :to="item.slide_button_link">
                                         {{ item.slide_button_text }}
-                                        <img :src="arrowBlack" :alt="item.slide_button_text" :title="item.slide_button_text"/>
                                     </router-link>
                                 </div>
                             </div>
@@ -50,6 +49,7 @@ export default {
         return {
             menuScrolled: false,
             arrowBlack: arrowBlack,
+            isReady: false,
             sliderOptions: {
                 groupCells: 1,
                 initialIndex: 0,
@@ -60,7 +60,8 @@ export default {
         }
     },
     created() {
-        this.getPosts() 
+        this.getPosts(), 
+        this.isReady = true
     },
     computed: mapState({
         pages: state => state.posts.pages

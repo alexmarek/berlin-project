@@ -1,19 +1,18 @@
 <template>
-  <nav class="container" :class="{ 'scrolled' : $store.state.scolled, 'black-menu' : $store.state.blackMenuText }">
+  <nav class="container" id="navigation" :class="{ 'black-menu' : $store.state.blackMenuText }" :bind="stickyNav()">
       <div class="row">
           <div class="container container--boxed" >
             <ul class="row">
                 <li class="main-logo">
                     <router-link to="/" @click.native="$store.state.blackMenuText = false">
-                        <img v-if="$store.state.blackMenuText" :src="logoBlack" alt="Infarm Logo" title="Back to Infarm Homepage"/>
-                        <img v-if="!$store.state.blackMenuText" :src="logoWhite" alt="Infarm Logo" title="Back to Infarm Homepage"/> 
+                        Infarm
                     </router-link>
                 </li>
                 <li v-for="item in menu" :key="item.id" ><router-link @click.native="menuColor(item)" :to='item.url' exact>{{ item.title }}</router-link></li>
             </ul>
           </div>
           <div class="language-switch">
-              <a href="#">DE <img :src="chevronDown" alt="switch language" title="Switch Language"/> </a>
+              <a href="#">DE</a>
           </div>
       </div>
   </nav>
@@ -33,7 +32,7 @@
             }
         },
         created() {
-            this.getMenu() 
+            this.getMenu();
         },
         computed: mapState({
             menu: state => state.menu.menu,
@@ -48,8 +47,18 @@
                 } else  {
                     this.$store.state.blackMenuText = false;
                 }
+            },
+            stickyNav: function(){
+                function stickyNavigation() {
+                    if (window.scrollY >= 200) {
+                        document.body.classList.add('fixed-nav');
+                    } else {
+                        document.body.classList.remove('fixed-nav');
+                    }
+                }
+                window.addEventListener('scroll', stickyNavigation);
             }
-        }
+        },
     }
 </script>
 

@@ -9,14 +9,12 @@ import VueRouter from 'vue-router'
 import Routes from './routes'
 import Translate from 'vue-i18n'
 import VueWaypoint from 'vue-waypoint'
-import vuescroll from 'vue-scroll'
 import Slider from 'vue-flickity';
 
 Vue.use(BootstrapVue)
 Vue.use(VueRouter)
 Vue.use(Translate)
 Vue.use(VueWaypoint)
-Vue.use(vuescroll)
 Vue.use(Slider)
 
 
@@ -31,3 +29,5 @@ new Vue({
   router: router,
   store
 });
+
+

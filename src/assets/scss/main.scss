@@ -9,14 +9,25 @@ body {
     font-family: 'FedraSansStd', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
     font-size: 16px;
 }
 
 h1,
 h2 {
-    font-weight: normal;
+    font-family: 'FedraSansBold';
 }
+
+p {
+    font-family: 'FedraSerifStd';
+    font-size: 1.1em;
+    line-height: 1.5;
+    letter-spacing: 0.3;
+    @include respond-to($desktop) {
+        font-size: 1.2em;
+        letter-spacing: 0.5px;
+    }
+}
+
 
 ul {
     list-style-type: none;
@@ -49,9 +60,37 @@ a.button {
     }
 }
 
+.fixed-nav {
+    #app{
+        nav {
+            background-color: $primaryWhite;
+            position: fixed;
+            max-height: 70px;
+            .main-logo{
+                background-image: url('/static/images/infarm-logo-black.svg');
+            }
+            a {
+                color: $primary;
+                font-size: 0.9em;
+            }
+        }
+        .language-switch {
+            a{
+                background-image: url('/static/images/chevron-black.svg');
+            }
+        }
+    }     
+}
+
 #app {
     .black-box{
         background-color: $primary;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        @include respond-to($desktop) {
+            padding-top: 170px;
+            padding-bottom: 140px;
+        }
         .content-item{
             h1, h2, h3, h4, p {
                 color: white;
@@ -61,8 +100,10 @@ a.button {
     
     nav {
         z-index: 1;
-        position: relative;
+        position: absolute;
+        top: 0;
         max-height: 90px;
+        
         ul {
             justify-content: flex-end;
             padding-bottom: 0;
@@ -70,10 +111,17 @@ a.button {
             .main-logo{
                 flex: auto;
                 width: 109px;
-                height: 28px;
+                height: 60px;
+                background-image: url('/static/images/infarm-logo-white.svg');
+                background-repeat: no-repeat;
+                background-position-y: center;
+                cursor: pointer;
                 a {
                     border: none;
                     margin-left: 0;
+                    text-indent: -5000px;
+                    display: inline-block;
+                    width: 100%;
                     &:hover {
                         opacity: 1;
                     }
@@ -98,13 +146,6 @@ a.button {
                     text-decoration: none;
                 }
             }
-            &.inverted {
-                background-color: $primary;
-                a {
-                    color: $primary;
-                    font-size: 0.9em;
-                }
-            }
         }
         &.black-menu {
             border-bottom: solid 1px $lightGrey;
@@ -126,8 +167,14 @@ a.button {
             color: $primaryWhite;
             font-weight: bold;
             font-size: 0.9em;
-            img {
-                margin-top: -4px;
+            display: inline-block;
+            background-image: url('/static/images/chevron-white.svg');
+            background-repeat: no-repeat;
+            background-position-y: -4px;
+            width: 60px;
+            background-position-x: 23px;
+            &:hover {
+                background-image: url('/static/images/chevron-black.svg');
             }
         }
     }
@@ -143,20 +190,14 @@ a.button {
     
     .header {
         &--home {
-            height: 667px;
-            margin-top: -160px;
+            height: 100vh;
             z-index: 0;
             overflow: hidden;
-            @include respond-to($desktop) {
-                height: 800px;
-                margin-top: -140px;
-            }
         }
         &--boxed {
             max-width: 1440px;
             @include respond-to($desktop) {
-                height: 810px;
-                margin-top: -90px;
+                height: 100vh;
             }
         }
         &__content {
@@ -205,7 +246,7 @@ a.button {
             width: 100%;
             &__image {
                 width: 100%;
-                height: 800px;
+                height: 100vh;
                 background-size: cover;
                 background-position: center;
                 padding: 18px;
@@ -234,20 +275,18 @@ a.button {
                 color: $primary;
                 background-color: $primaryWhite;
                 width: 260px;
-                img {
-                    float: right;
-                    margin-top: -1px;
-                    transform: translateX(0);
-                    transition: 0.2s transform ease-in-out;
-                }
+                background-image: url('/static/images/arrow-black.svg');
+                background-repeat: no-repeat;
+                background-position: 220px center;
+                transition: 0.2s all ease-in-out;
+                
                 &:hover {
                     background-color: transparent;
                     border-color: transparent;
                     border-bottom: 2px solid $primaryWhite;
                     color: $primaryWhite;
-                    img{
-                        transform: translateX(5px);
-                    }
+                    background-image: url('/static/images/arrow-white.svg');
+                    background-position: 225px center;
                 }
                 
                 @include respond-to($desktop) {
@@ -260,8 +299,6 @@ a.button {
         }
     }
     .content-item {
-        transition: margin-top 0.3s ease-in-out;
-        margin-top: 100px;
         &--taste {
             margin-top: 0;
         }
