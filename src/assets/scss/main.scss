@@ -45,19 +45,8 @@ a {
         opacity: 0.7;
     }
 }
-
-a.button {
-    border: solid 2px white;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding-left: 1em;
-    display: inline-block;
-    padding: 1em 1em 0.8em;
-    color: white;
-    &:hover {
-        color: white;
-        opacity: 0.8;
-    }
+.background-black {
+    background-color: $primary;
 }
 
 .fixed-nav {
@@ -149,6 +138,9 @@ a.button {
         }
         &.black-menu {
             border-bottom: solid 1px $lightGrey;
+            .main-logo{
+                background-image: url('/static/images/infarm-logo-black.svg');
+            }
             ul li a {
                 color: $primary;
                 border-color: $primaryWhite;
@@ -173,9 +165,6 @@ a.button {
             background-position-y: -4px;
             width: 60px;
             background-position-x: 23px;
-            &:hover {
-                background-image: url('/static/images/chevron-black.svg');
-            }
         }
     }
     .container {
@@ -185,6 +174,40 @@ a.button {
             position: relative;
             height: 100%;
             margin: auto;
+            width: 100%;
+        }
+        &.taste-box {
+            margin-bottom: 150px;
+            .flickity-enabled {
+                height: 390px;
+                margin-top: 40px;
+            }
+            .flickity-prev-next-button.previous {
+                left: -110px;
+            }
+            .flickity-prev-next-button.next {
+                right: -110px;
+            }
+            .slider {
+                height: 360px;
+                background-color: $lightGrey;
+                width: 360px;
+                margin-right: 27px;
+
+            }
+           .slider__title{
+                color: $primaryWhite;
+                position: absolute;
+                top: 260px;
+                left: 25px;
+                max-width: 245px;
+           }
+        }
+        &.how-box {
+            height: 760px;
+            .row, .background-black {
+                height: 100%;
+            }
         }
     }
     
@@ -196,6 +219,7 @@ a.button {
         }
         &--boxed {
             max-width: 1440px;
+            width: 100%;
             @include respond-to($desktop) {
                 height: 100vh;
             }
@@ -333,6 +357,25 @@ a.button {
             letter-spacing: 0.5px;
             @include respond-to($tablet-landscape) {
                 font-size: 1em;
+            }
+        }
+        &__icons {
+            display: inline-block;
+            min-width: 120px;
+            text-align: center;
+            @include respond-to($desktop) {
+                margin-top: 50px
+             } 
+            h5 {
+                font-family: FedraSansStd;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 1.25;
+                letter-spacing: 0.6px;
+                text-align: center;
+                color: $primaryWhite;
+                max-width: 90px;
+                margin: 20px auto;
             }
         }
     }

@@ -20,15 +20,9 @@
 
 <script>
     import { mapState, mapActions } from  'vuex'
-    import logoWhite from '../assets/images/infarm-logo-white.svg'
-    import logoBlack from '../assets/images/infarm-logo-black.svg'
-    import chevronDown from '../assets/images/chevron-white.svg'
         export default {
         data () {
             return {
-                logoWhite: logoWhite,
-                logoBlack: logoBlack,
-                chevronDown: chevronDown
             }
         },
         created() {

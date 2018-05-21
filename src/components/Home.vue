@@ -25,12 +25,59 @@
             <div class="row">
                 <div class="container--boxed content-item ">
                     <div v-if="Object.keys(pages[1].acf.content).length > 0" class="row" v-for="(item, index) in pages[1].acf.content" :key="index">
-                        <div class="col-md-6 d-flex align-items-center">
+                        <div class="col-md-6 d-flex align-items-start">
                             <h3>{{ item.heading }}</h3>
                         </div>
-                        <div class="col-md-6 d-flex align-items-center">
+                        <div class="col-md-6 d-flex align-items-start">
                             <p v-html="item.content"></p>
                         </div>
+                        <div class="col-md-6 offset-md-6" >
+                            <span class="content-item__icons" v-for="(item, index) in pages[1].acf.icons" :key="index">
+                                <img :src="item.icon" />
+                                <h5>{{ item.title }}</h5>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container taste-box">
+            <div class="row">
+                <div class="container--boxed content-item">
+                    <div class="row" v-for="(item, index) in pages[1].acf.taste_home" :key="index">
+                        <h3 class="col-md-6" > {{ item.title }} </h3>
+                        <div class="col-md-6"></div>
+                    </div>
+                    <slider ref="flickity" :options="tasteSliderOptions">
+                        <div class="slider slider--home-taste" v-for="(slider, index) in pages[1].acf.taste_home[0].taste_selector" :key="index">
+                            <div class="slider__image">
+                                <div class="container container--boxed">
+                                    <div class="row">
+                                        <h2 class="slider__title">{{ slider.post_title }}</h2>
+                                        
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </slider>
+                    <router-link class="button black__button" :to="item.button_link" v-for="(item, index) in pages[1].acf.taste_home" :key="index">
+                        {{ item.button_text }}
+                    </router-link>
+                </div>
+            </div>
+        </div>
+         <div class="container how-box">
+            <div class="row">
+                <div class=" content-item">
+                    <div class="row" v-for="(item, index) in pages[1].acf.box" :key="index">
+                        <div class="col-md-6 background-black" >
+                            <h3> {{ item.box_title }} </h3>
+                            <p> {{ item.box_text }} </p>
+                            <router-link class="button white__button" :to="item.box_button_link">
+                                {{ item.box_button_text }}
+                            </router-link>
+                        </div>
+                        <div class="col-md-6"></div>
                     </div>
                 </div>
             </div>
@@ -42,20 +89,25 @@
 
 import { mapState, mapActions } from 'vuex'
 import Slider from 'vue-flickity';
-import arrowBlack from '../assets/images/arrow-black.svg'
 
 export default {
     data(){
         return {
             menuScrolled: false,
-            arrowBlack: arrowBlack,
             isReady: false,
             sliderOptions: {
                 groupCells: 1,
                 initialIndex: 0,
                 prevNextButtons: false,
-                pageDots: true,
+                pageDots: false,
                 wrapAround: true
+            },
+            tasteSliderOptions: {
+                groupCells: 3,
+                prevNextButtons: true,
+                pageDots: false,
+                freeScroll: true,
+                wrapAround: false
             },
         }
     },

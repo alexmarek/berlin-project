@@ -1,21 +1,52 @@
-button {
-    color: white;
-    border: solid 2px white;
+@import './mixins.scss';
+
+.button {
     text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1em;
-    height: 3.6em;
-    border-radius: 0;
-    line-height: 3.6em;
-    letter-spacing: 1;
-    background-color: transparent;
-    padding: 0 1em;
-    &:active, &:focus, &:hover{
-        box-shadow: none;
-        outline: none;
+    border-color:transparent;
+    text-decoration:none;
+    height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 220px center;
+    transition: 0.2s all ease-in-out;
+    width: 260px;
+    padding-left:1em;
+    &:hover {
+        text-decoration: none;
+        background-position: 225px center;
+        background-color: transparent;
+        border-color: transparent;
+        opacity: 1;
     }
-    &.inverted {
-        background-color: $buttonGrey;
-        border-color: $buttonGrey;
+}
+
+a.white__button, .white__button {
+    color: $primary;
+    background-color: $primaryWhite;
+    background-image: url('/static/images/arrow-black.svg');
+    &:hover {
+        background-image: url('/static/images/arrow-white.svg');
+        color: $primaryWhite;
+        background-color: $primary;
+    }
+}
+
+a.black__button, .black__button {
+    color: $primaryWhite;
+    background-color: $primary;
+    background-image: url('/static/images/arrow-white.svg');
+
+    &:hover {
+        border-bottom: 2px solid $primary;
+        color: $primary;
+        background-image: url('/static/images/arrow-black.svg');
+    }
+    
+    @include respond-to($desktop) {
+        bottom: 150px;
+    }
+    @include respond-to($phone) {
+        width: 100%;
     }
 }
