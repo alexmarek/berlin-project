@@ -50,3 +50,48 @@ a.black__button, .black__button {
         width: 100%;
     }
 }
+
+.cookie-notice.Cookie--base, .cookie-notice {
+    background-color: $primary;
+    color: $primaryWhite;
+    &__text {
+        font-family: FedraSansLight, Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        margin-left: 24px;
+        @include respond-to($tablet-portrait){
+            margin-left: 0;
+        }
+        a {
+            color: white;
+            font-family: FedraSansBold, Arial, Helvetica, sans-serif;
+            text-decoration: underline;
+        }
+    }
+}
+.Cookie {
+    &__content {
+        @include respond-to($tablet-portrait){
+            margin: 0.2em 0 !important;
+        }
+    }
+}
+
+.Cookie--base {
+    padding: 0.6em 1.250em !important;
+    .Cookie__buttons {
+        width: auto;
+        @include respond-to($tablet-portrait){
+            width: 100%;
+            padding: 0;
+        }
+        .Cookie__button{
+            background-color: $primaryWhite;
+            text-transform: uppercase;
+            color: $primary;
+            padding: 0.425em 3.125em 0.3em;
+            text-align: center;
+            width: 100%;
+            
+        }
+    } 
+} 

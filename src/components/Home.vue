@@ -32,7 +32,7 @@
                             <p v-html="item.content"></p>
                         </div>
                         <div class="col-md-6 offset-md-6" >
-                            <span class="content-item__icons" v-for="(item, index) in pages[1].acf.icons" :key="index">
+                            <span class="content-item__icons" v-for="(item, id) in pages[1].acf.icons" :key="id">
                                 <img :src="item.icon" />
                                 <h5>{{ item.title }}</h5>
                             </span>
@@ -82,6 +82,13 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <cookie-law class="cookie-notice">
+                <div slot="message" class="cookie-notice__text">
+                    This website uses cookies to ensure you get the best experience on our website. <router-link to="legal">Learn more</router-link>
+                </div>
+            </cookie-law>
+        </footer>
     </div>    
 </template>
 
@@ -89,6 +96,7 @@
 
 import { mapState, mapActions } from 'vuex'
 import Slider from 'vue-flickity';
+import CookieLaw from 'vue-cookie-law'
 
 export default {
     data(){
@@ -120,6 +128,7 @@ export default {
     }),
     components: {
        slider: Slider,
+       CookieLaw,
     },
     methods: {
     ...mapActions([
